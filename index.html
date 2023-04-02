@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect Four</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="connect-four-icon.png">
 </head>
+
 <body>
     <nav>
         <button>Menu</button>
         <div class="logo"><span p></span><span y></span><span y></span><span p></span></div>
-        <button>Restart</button>
+        <button onclick="window.location.reload()">Restart</button>
     </nav>
     <main>
         <section class="menu-section">
-            
         </section>
         <section class="game-section">
-        <div class="player-block player-one">
-            <span class="player-icon" p>
-                <span class="eyes"></span>
-                <span class="mouth"></span>
-            </span>
-            <p>Player 1</p>
-            <h1 id="playerOneScore">0</h1>
-        </div>
-        <div class="board">
-            <ul class="main-board">
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-                <li class="connect-block"></li>
-            </ul>
-            <div class="timer">
-                <p class="turn-indicator">Player 1's turn</p>
-                <h1 class="remaining-time">START</h1>
+            <div class="player-block player-one">
+                <span class="player-icon" p>
+                    <span class="eyes"></span>
+                    <span class="mouth"></span>
+                </span>
+                <p>Player 1</p>
+                <h1 id="playerOneScore">0</h1>
             </div>
-            <div class="marker"></div>
-        </div>
-        <div class="player-block player-two">
-            <span class="player-icon" y>
-                <span class="eyes"></span>
-                <span class="mouth"></span>
-            </span>
-            <p>Player 2</p>
-            <h1 id="playerTwoScore">0</h1></div>
+            <div class="board">
+                <ul class="main-board">
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                    <li class="connect-block"><span></span></li>
+                </ul>
+                <div class="timer">
+                    <p class="turn-indicator">Player 1's turn</p>
+                    <h1 class="remaining-time">START</h1>
+                </div>
+                <div class="marker"></div>
+            </div>
+            <div class="player-block player-two">
+                <span class="player-icon" y>
+                    <span class="eyes"></span>
+                    <span class="mouth"></span>
+                </span>
+                <p>Player 2</p>
+                <h1 id="playerTwoScore">0</h1>
+            </div>
         </section>
     </main>
-    
+
     <footer></footer>
     <script src='code.js'></script>
 </body>
+
 </html>

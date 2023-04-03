@@ -43,6 +43,7 @@ nav>button {
   font-weight: 500;
   cursor: pointer;
   font-size: 16px;
+  opacity: 0;
 }
 
 .logo {
@@ -52,7 +53,7 @@ nav>button {
   width: 60px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(150%);
 }
 
 .logo>span {
@@ -71,6 +72,9 @@ nav>button {
 [p] {
   background-color: var(--pink-color);
 }
+[w]{
+  background-color: white;
+}
 
 main {
   max-width: 1100px;
@@ -78,11 +82,107 @@ main {
 }
 
 .game-section {
+  opacity: 0;
+  transform: translateY(100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   padding: 0 1rem;
+  display: none;
+}
+.menu-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1.5rem;
+  height: 500px;
+  position: relative;
+}
+.menu-btn{
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  border: var(--default-border);
+  box-shadow: 0 8px 0;
+  font-size: 22px;
+  font-weight: 600;
+  min-width: 300px;
+  width: 90%;
+  max-width: 400px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: left;
+  transition: all ease 0.1s;
+}
+.menu-btn[p]{
+  color: white;
+  box-shadow: 0 8px 0 black;
+}
+.menu-btn:hover{
+  /* border-color: #eee; */
+  box-shadow: 0 4px 0 black;
+}
+.rules-card{
+  position: absolute;
+  border: var(--default-border);
+  padding: 2rem 2rem;
+  margin: 0 1rem;
+  border-radius: 2rem;
+  max-width: 720px;
+  box-shadow: 0 8px 0;
+  top:50px;
+}
+.rules-card button{
+  border-radius: 50%;
+  box-shadow: 0 4px 0 black;
+  width: 60px;height: 60px;
+  position: absolute;
+  font-size: 32px;
+  color: white;
+  left:50%;
+  transform: translateX(-50%) rotateZ(0deg);
+  bottom: -2rem;
+  border:var(--default-border);
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.rules-card button:hover{
+  transform: translateX(-50%) rotateZ(10deg);
+}
+.rules-card h3{
+  color: var(--purple-color);
+  text-transform: uppercase;
+  margin: 1.25rem 0;
+}
+.rules-card h1{
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-size: 48px;
+}
+ol.custom {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+ol.custom > li {
+  counter-increment: customlistcounter;
+  margin:1.5rem 0;
+}
+
+ol.custom > li:before {
+  content: counter(customlistcounter) " ";
+  font-weight: bold;
+  float: left;
+  width: 1em;
+  margin-right: 1rem;
+  height: 40px;
+}
+
+ol.custom:first-child {
+  counter-reset: customlistcounter;
 }
 
 .player-block {
@@ -348,6 +448,7 @@ ul {
 }
 
 footer {
+  display: none;
   background-color: var(--dark-purple-color);
   height: 30vh;
   width: 100%;
@@ -356,7 +457,9 @@ footer {
   z-index: -1;
   border-radius: 3rem 3rem 0 0;
 }
-
+.slide-up-anim{
+  animation: slideUp 1s ease forwards;
+}
 @keyframes slideUp {
   0% {
     transform: translateY(40%);
@@ -481,14 +584,13 @@ footer {
   footer {
     height: 20vh;
   }
+  .rules-card{
+    padding: 1.5rem;
+  }
 }
 
 @media screen and (max-height: 720px) {
   .board {
     max-width: 600px;
-  }
-
-  .main-board {
-    gap: 0.6rem;
   }
 }

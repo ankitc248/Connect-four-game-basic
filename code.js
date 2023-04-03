@@ -232,3 +232,11 @@ function areFourConnected(player) {
   }
   return false;
 }
+
+document.getElementById('closeRulesBtn').addEventListener('click',function(){
+  document.getElementsByClassName('rules-card')[0].style.display='none'
+})
+
+document.getElementById('openRulesBtn').addEventListener('click',function(){
+  document.getElementsByClassName('rules-card')[0].style.display='block'
+})
